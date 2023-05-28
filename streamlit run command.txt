@@ -1,0 +1,1 @@
+streamlit run "E:\Multiple Disease pred\mdp.py"
