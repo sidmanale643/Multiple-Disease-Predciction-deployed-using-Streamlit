@@ -140,7 +140,7 @@ if (selected == "Parkinsons Prediction"):
     # page title
     st.title("Parkinson's Disease Prediction using ML")
     
-    col1, col2, col3, col4, col5 = st.columns(5)  
+    col1, col2, col3, col4, col5 = st.columns(4)  
     
     with col1:
         fo = st.number_input('MDVP:Fo(Hz)')
@@ -154,52 +154,52 @@ if (selected == "Parkinsons Prediction"):
     with col4:
         Jitter_percent = st.number_input('MDVP:Jitter(%)')
         
-    with col5:
+    with col1:
         Jitter_Abs = st.number_input('MDVP:Jitter(Abs)')
         
-    with col1:
+    with col2:
         RAP = st.number_input('MDVP:RAP')
         
-    with col2:
+    with col3:
         PPQ = st.number_input('MDVP:PPQ')
         
-    with col3:
+    with col4:
         DDP = st.number_input('Jitter:DDP')
         
-    with col4:
+    with col1:
         Shimmer = st.number_input('MDVP:Shimmer')
         
-    with col5:
+    with col2:
         Shimmer_dB = st.number_input('MDVP:Shimmer(dB)')
         
-    with col1:
+    with col3:
         APQ3 = st.number_input('Shimmer:APQ3')
         
-    with col2:
+    with col4:
         APQ5 = st.number_input('Shimmer:APQ5')
         
-    with col3:
+    with col1:
         APQ = st.number_input('MDVP:APQ')
         
-    with col4:
+    with col2:
         DDA = st.number_input('Shimmer:DDA')
         
-    with col5:
+    with col3:
         NHR = st.number_input('NHR')
         
-    with col1:
+    with col4:
         HNR = st.number_input('HNR')
         
-    with col2:
+    with col1:
         RPDE = st.number_input('RPDE')
         
-    with col3:
+    with col2:
         DFA = st.number_input('DFA')
         
-    with col4:
+    with col3:
         spread1 = st.number_input('spread1')
         
-    with col5:
+    with col4:
         spread2 = st.number_input('spread2')
         
     with col1:
@@ -215,7 +215,7 @@ if (selected == "Parkinsons Prediction"):
     
     # creating a button for Prediction    
     if st.button("Parkinson's Test Result"):
-        parkinsons_prediction = parkinsons_model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ,DDP,Shimmer,Shimmer_dB,APQ3,APQ5,APQ,DDA,NHR,HNR,RPDE,DFA,spread1,spread2,D2,PPE]])                          
+        parkinsons_prediction = parkinsons_model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ,DDP, Shimmer, Shimmer_dB, APQ3, APQ5, APQ, DDA, NHR, HNR, RPDE, DFA, spread1, spread2, D2, PPE]])                          
         
         if (parkinsons_prediction[0] == 1):
           parkinsons_diagnosis = "The person has Parkinson's disease"
